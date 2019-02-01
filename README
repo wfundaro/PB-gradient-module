@@ -1,8 +1,8 @@
 PB-gradient-module
 A simple gradient creator
 
--Added transparency support -> mouse wheel + -1 and if SHIFT pressed + -10
+-Added transparency support -> mouse wheel on cursor -> +/-1 and if SHIFT pressed +/-10
 
 -CTRL + left-click on an unselected cursor assigns it the selected cursor color
 
--ALT + left click swaps the colors between the selected cursor and the cursor clicked
+-ALT + left click swaps the colors between the selected cursor and the clicked cursor
