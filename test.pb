@@ -31,14 +31,21 @@ Repeat
           If gradient::get_cursor_state() = 0
             actif$ = "inactive"
           EndIf
-          Debug "cursor "+Str(i) + " in position : " + StrF(gradient::get_cursor_position()) + " of color : " + Str(gradient::get_cursor_color()) + " is " + actif$
+          info_txt$ = info_txt$ + "cursor "+Str(i) + " in position : " + StrF(gradient::get_cursor_position()) +
+                      " of color : " + Str(gradient::get_cursor_color()) + " is " + actif$ + Chr(13)
           gradient::next_cursor()
-        Next        
+        Next
+        CompilerIf #PB_Compiler_Debugger
+          Debug info_txt$
+        CompilerElse
+          MessageRequester("Info text", info_txt$)
+        CompilerEndIf
       EndIf
   EndSelect 
 ForEver
 ; IDE Options = PureBasic 5.70 LTS (Windows - x86)
-; CursorPosition = 12
+; CursorPosition = 25
+; FirstLine = 6
 ; Folding = -
 ; EnableXP
-; DisableDebugger
+; Executable = test.exe
